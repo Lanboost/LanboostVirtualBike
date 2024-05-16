@@ -1,0 +1,39 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bmlwwbe0sbs4u"
+path.s3tc="res://.godot/imported/Free Low Poly Bike Models-776fd6b98f190be80a5e79553392e507_ao_met_rough_Low Poly Cycles Staggered_Low Poly Cycles (BMX, Mountain Bike, Unicycle) 1_Roughness.png-365ccfb08f0991081e47fc2e40211f35.s3tc.ctex"
+path.etc2="res://.godot/imported/Free Low Poly Bike Models-776fd6b98f190be80a5e79553392e507_ao_met_rough_Low Poly Cycles Staggered_Low Poly Cycles (BMX, Mountain Bike, Unicycle) 1_Roughness.png-365ccfb08f0991081e47fc2e40211f35.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "fcaf36be0a3783cac7b2a83e91353059"
+}
+
+[deps]
+
+source_file="res://Assets/Free Low Poly Bike Models/Free Low Poly Bike Models-776fd6b98f190be80a5e79553392e507_ao_met_rough_Low Poly Cycles Staggered_Low Poly Cycles (BMX, Mountain Bike, Unicycle) 1_Roughness.png"
+dest_files=["res://.godot/imported/Free Low Poly Bike Models-776fd6b98f190be80a5e79553392e507_ao_met_rough_Low Poly Cycles Staggered_Low Poly Cycles (BMX, Mountain Bike, Unicycle) 1_Roughness.png-365ccfb08f0991081e47fc2e40211f35.s3tc.ctex", "res://.godot/imported/Free Low Poly Bike Models-776fd6b98f190be80a5e79553392e507_ao_met_rough_Low Poly Cycles Staggered_Low Poly Cycles (BMX, Mountain Bike, Unicycle) 1_Roughness.png-365ccfb08f0991081e47fc2e40211f35.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

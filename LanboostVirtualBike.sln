@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanboostVirtualBike", "LanboostVirtualBike.csproj", "{089ABF4A-F0E2-4ED3-B65A-3918B0ADDE03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mirage.SocketLayer", "..\Mirage.Godot\src\Mirage.Core\Mirage.SocketLayer\Mirage.SocketLayer.csproj", "{43A0E08F-1030-4D1D-A863-712A8B070816}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mirage.Logging", "..\Mirage.Godot\src\Mirage.Core\Mirage.Logging\Mirage.Logging.csproj", "{D58E3408-275D-4843-91DE-98CBDDC60BD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{089ABF4A-F0E2-4ED3-B65A-3918B0ADDE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{089ABF4A-F0E2-4ED3-B65A-3918B0ADDE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{089ABF4A-F0E2-4ED3-B65A-3918B0ADDE03}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{089ABF4A-F0E2-4ED3-B65A-3918B0ADDE03}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{089ABF4A-F0E2-4ED3-B65A-3918B0ADDE03}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{089ABF4A-F0E2-4ED3-B65A-3918B0ADDE03}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{089ABF4A-F0E2-4ED3-B65A-3918B0ADDE03}.Release|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{089ABF4A-F0E2-4ED3-B65A-3918B0ADDE03}.Release|Any CPU.Build.0 = ExportRelease|Any CPU
+		{43A0E08F-1030-4D1D-A863-712A8B070816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A0E08F-1030-4D1D-A863-712A8B070816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A0E08F-1030-4D1D-A863-712A8B070816}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A0E08F-1030-4D1D-A863-712A8B070816}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{43A0E08F-1030-4D1D-A863-712A8B070816}.ExportRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{43A0E08F-1030-4D1D-A863-712A8B070816}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
+		{43A0E08F-1030-4D1D-A863-712A8B070816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A0E08F-1030-4D1D-A863-712A8B070816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D58E3408-275D-4843-91DE-98CBDDC60BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58E3408-275D-4843-91DE-98CBDDC60BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D58E3408-275D-4843-91DE-98CBDDC60BD6}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58E3408-275D-4843-91DE-98CBDDC60BD6}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{D58E3408-275D-4843-91DE-98CBDDC60BD6}.ExportRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{D58E3408-275D-4843-91DE-98CBDDC60BD6}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
+		{D58E3408-275D-4843-91DE-98CBDDC60BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D58E3408-275D-4843-91DE-98CBDDC60BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+[gd_resource type="AnimationLibrary" load_steps=2 format=3 uid="uid://ccl5rs0gb04d"]
+
+[ext_resource type="Animation" uid="uid://bgbbjql3my14c" path="res://Assets/testflyingkickanim.res" id="1_aqt12"]
+
+[resource]
+_data = {
+"testflyingkickanim": ExtResource("1_aqt12")
+}

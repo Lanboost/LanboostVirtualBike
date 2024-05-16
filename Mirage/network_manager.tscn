@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://cssq02xgdwy5"]
+
+[ext_resource type="Script" path="res://Mirage/Scripts/Components/NetworkManager.cs" id="1_nnufn"]
+[ext_resource type="Script" path="res://Mirage/Scripts/NetworkServer.cs" id="2_4m008"]
+[ext_resource type="Script" path="res://Mirage/Scripts/NetworkClient.cs" id="3_biohh"]
+[ext_resource type="Script" path="res://Mirage/Scripts/Objects/ServerObjectManager.cs" id="3_swwkg"]
+[ext_resource type="Script" path="res://Mirage/Scripts/Udp/UdpSocketFactory.cs" id="4_2jcbo"]
+[ext_resource type="Script" path="res://Mirage/Scripts/Objects/ClientObjectManager.cs" id="5_dfywn"]
+[ext_resource type="Script" path="res://Mirage/Scripts/NetworkHud.cs" id="5_i0d1x"]
+[ext_resource type="PackedScene" uid="uid://2n1kbimx04mx" path="res://player.tscn" id="6_ras6v"]
+
+[node name="NetworkManager" type="Node" node_paths=PackedStringArray("Server", "ServerObjectManager", "Client", "ClientObjectManager", "SocketFactory")]
+script = ExtResource("1_nnufn")
+Server = NodePath("Server")
+ServerObjectManager = NodePath("ServerObjectManager")
+MaxConnections = 10
+Client = NodePath("Client")
+ClientObjectManager = NodePath("ClientObjectManager")
+SocketFactory = NodePath("SocketFactory")
+
+[node name="Server" type="Node" parent="." node_paths=PackedStringArray("SocketFactory", "ObjectManager")]
+script = ExtResource("2_4m008")
+SocketFactory = NodePath("../SocketFactory")
+ObjectManager = NodePath("../ServerObjectManager")
+
+[node name="ServerObjectManager" type="Node" parent="."]
+script = ExtResource("3_swwkg")
+
+[node name="Client" type="Node" parent="." node_paths=PackedStringArray("SocketFactory", "ObjectManager")]
+script = ExtResource("3_biohh")
+SocketFactory = NodePath("../SocketFactory")
+ObjectManager = NodePath("../ClientObjectManager")
+
+[node name="ClientObjectManager" type="Node" parent="."]
+script = ExtResource("5_dfywn")
+PackedScenes = Array[PackedScene]([ExtResource("6_ras6v")])
+
+[node name="SocketFactory" type="Node" parent="."]
+script = ExtResource("4_2jcbo")
+Address = ""
+
+[node name="HUD" type="Node" parent="." node_paths=PackedStringArray("_manager", "_socketFactory")]
+script = ExtResource("5_i0d1x")
+_manager = NodePath("..")
+_socketFactory = NodePath("../SocketFactory")
+_address = ""

@@ -1,0 +1,424 @@
+[gd_scene load_steps=32 format=3 uid="uid://b8bjumqhwvtkx"]
+
+[ext_resource type="Script" path="res://GameData.cs" id="1_arejm"]
+[ext_resource type="Script" path="res://Movement.cs" id="1_w5uso"]
+[ext_resource type="Script" path="res://TestScript.cs" id="2_85j2x"]
+[ext_resource type="PackedScene" uid="uid://b0pjqigc1n4w0" path="res://SyntyAssets/CityPack/Scenes/Bld/auto_build_shop.tscn" id="2_nbsb2"]
+[ext_resource type="PackedScene" uid="uid://dif4ijec5gcqs" path="res://SyntyAssets/CityPack/Scenes/Bld/prefab_office_corner_3_wide.tscn" id="3_yr8nq"]
+[ext_resource type="PackedScene" uid="uid://ecvmj655kdqf" path="res://SyntyAssets/CityPack/Scenes/Bld/prefab_office_old.tscn" id="4_roed8"]
+[ext_resource type="PackedScene" uid="uid://bd82bxcaglsjq" path="res://SyntyAssets/CityPack/Scenes/Bld/prefab_office_square.tscn" id="5_rgf23"]
+[ext_resource type="PackedScene" uid="uid://bjxluxp8hsbxq" path="res://SyntyAssets/CityPack/Scenes/Bld/prefab_office_tall.tscn" id="6_khutg"]
+[ext_resource type="PackedScene" uid="uid://bky21dcotavfu" path="res://SyntyAssets/CityPack/Scenes/city.tscn" id="8_fot2a"]
+[ext_resource type="PackedScene" uid="uid://bkvnsyab5eni6" path="res://SyntyAssets/CityPack/Scenes/holder_sm_env.tscn" id="9_c1vbt"]
+[ext_resource type="PackedScene" uid="uid://dr3d5c2eca55u" path="res://SyntyAssets/CityPack/Scenes/holder_sm_env_flowers.tscn" id="10_1jxry"]
+[ext_resource type="PackedScene" uid="uid://c6shbnyst8nrv" path="res://SyntyAssets/CityPack/Scenes/Holder_SM_Props.tscn" id="11_gjp3c"]
+[ext_resource type="PackedScene" uid="uid://cssq02xgdwy5" path="res://Mirage/network_manager.tscn" id="12_ciho8"]
+[ext_resource type="Script" path="res://Input.cs" id="12_ejywo"]
+[ext_resource type="Texture2D" uid="uid://oicm3yfwkd55" path="res://icon/speedometer.svg" id="12_ii3bo"]
+[ext_resource type="Texture2D" uid="uid://blon157rogu5c" path="res://icon/road.svg" id="13_sqnch"]
+[ext_resource type="Texture2D" uid="uid://78phavrlcmj6" path="res://icon/watch.svg" id="14_aads2"]
+[ext_resource type="Script" path="res://GameClient.cs" id="14_vn4dk"]
+[ext_resource type="Texture2D" uid="uid://dgpo4737xsao4" path="res://icon/heart-beats.svg" id="15_b3xij"]
+[ext_resource type="PackedScene" uid="uid://2n1kbimx04mx" path="res://player.tscn" id="15_dfado"]
+[ext_resource type="Script" path="res://GameNetworkManager.cs" id="15_x72nh"]
+[ext_resource type="Texture2D" uid="uid://drxk8jijj0n44" path="res://icon/clockwise-rotation.svg" id="16_fbcfr"]
+[ext_resource type="Texture2D" uid="uid://dcaoynkxxfr7" path="res://icon/eating.svg" id="17_2t7wr"]
+[ext_resource type="Script" path="res://SettingsPopup.cs" id="19_nup0g"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_12u7r"]
+
+[sub_resource type="Curve3D" id="Curve3D_85cik"]
+bake_interval = 8.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 10.772, 0, -7.539, 0, 0, 0, 0, 0, 0, -11.019, 0, -7.604, 0, 0, 0, 0, 0, 0, -57.562, 0, -7.745, 0, 0, 0, 0, 0, 0, -61.719, 0, -6.11, 0, 0, 0, 0, 0, 0, -63.569, 0, 1.856, 0, 0, 0, 0, 0, 0, -63.521, 0, 26.064, 0, 0, 0, 0, 0, 0, -61.883, 0, 34.594, 0, 0, 0, 0, 0, 0, -62.215, 0, 42.1, 0, 0, 0, 0, 0, 0, -62.029, 0, 50.003, 0, 0, 0, 0, 0, 0, -61.728, 0, 51.727, 0, 0, 0, 0, 0, 0, -59.414, 0, 52.552, 0, 0, 0, 0, 0, 0, -45.166, 0, 52.461, 0, 0, 0, 0, 0, 0, -42.952, 0, 51.695, 0, 0, 0, 0, 0, 0, -42.433, 0, 49.493, 0, 0, 0, 0, 0, 0, -41.417, 0, 47.927, 0, 0, 0, 0, 0, 0, -39.691, 0, 47.503, 0, 0, 0, 0, 0, 0, -34.665, 0, 47.347, 0, 0, 0, 0, 0, 0, -32.025, 0, 45.653, 0, 0, 0, 0, 0, 0, -30.543, 0, 42.068, 0, 0, 0, 0, 0, 0, -28.373, 0, 37.497, 0, 0, 0, 0, 0, 0, -22.587, 0, 37.249, 0, 0, 0, 0, 0, 0, -6.846, 0, 37.242, 0, 0, 0, 0, 0, 0, 0.017, 0, 36.82, 0, 0, 0, 0, 0, 0, 1.955, 0, 34.486, 0, 0, 0, 0, 0, 0, 2.988, 0, 29.409, 0, 0, 0, 0, 0, 0, 3.249, 0, 3.388, 0, 0, 0, 0, 0, 0, 2.854, 0, -44.529, 0, 0, 0, 0, 0, 0, 3.412, 0, -47.137, 0, 0, 0, 0, 0, 0, 7.062, 0, -47.231, 0, 0, 0, 0, 0, 0, 30.32, 0, -47.29, 0, 0, 0, 0, 0, 0, 36.614, 0, -41.353, 0, 0, 0, 0, 0, 0, 43.1, 0, -34.667, 0, 0, 0, 0, 0, 0, 42.353, 0, -10.32, 0, 0, 0, 0, 0, 0, 40.937, 0, -8.658, 0, 0, 0, 0, 0, 0, 36.634, 0, -7.743, 0, 0, 0, 0, 0, 0, 10.772, 0, -7.539),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 36
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yww8e"]
+
+[sub_resource type="Sky" id="Sky_kingq"]
+sky_material = SubResource("ProceduralSkyMaterial_yww8e")
+
+[sub_resource type="Environment" id="Environment_2y3ve"]
+background_mode = 2
+sky = SubResource("Sky_kingq")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_e2sxr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wthgb"]
+bg_color = Color(0.18359, 0.18359, 0.18359, 1)
+
+[node name="GameDataSingleton" type="Node" node_paths=PackedStringArray("gameClient", "path3d", "movement")]
+script = ExtResource("1_arejm")
+gameClient = NodePath("GameClient")
+path3d = NodePath("Main/Node3D/Path3D")
+movement = NodePath("Main/Node3D")
+
+[node name="Main" type="Node" parent="."]
+
+[node name="Node3D" type="Node3D" parent="Main" node_paths=PackedStringArray("powerSlider", "powerLabel", "timeLabel", "distanceLabel", "speedLabel", "workLabel", "bluetoothButton", "backButton", "bluetoothControl", "testScript")]
+script = ExtResource("1_w5uso")
+powerSlider = NodePath("../Hud/Settings/HSlider")
+powerLabel = NodePath("../Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/Watts")
+timeLabel = NodePath("../Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer3/Time")
+distanceLabel = NodePath("../Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer2/Distance")
+speedLabel = NodePath("../Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer/Speed")
+workLabel = NodePath("../Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer7/Calories")
+bluetoothButton = NodePath("../Hud/Settings/Button")
+backButton = NodePath("../Hud/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Button4")
+bluetoothControl = NodePath("../Hud/PanelContainer")
+testScript = NodePath("../Hud/PanelContainer")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Main/Node3D"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+visible = false
+mesh = SubResource("PlaneMesh_12u7r")
+
+[node name="Path3D" type="Path3D" parent="Main/Node3D"]
+curve = SubResource("Curve3D_85cik")
+
+[node name="AutoBuild_Shop" parent="Main" instance=ExtResource("2_nbsb2")]
+transform = Transform3D(2.34047e-06, 0, -1, 0, 1, 0, 1, 0, 2.34047e-06, -23.8175, -2.92791, -19.2506)
+visible = false
+
+[node name="Prefab_OfficeCorner3Wide" parent="Main" instance=ExtResource("3_yr8nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.91985, -0.0725079, -22.6396)
+visible = false
+
+[node name="Prefab_OfficeOld" parent="Main" instance=ExtResource("4_roed8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.6597, 3.8147e-06, 51.2118)
+visible = false
+
+[node name="Prefab_OfficeSquare" parent="Main" instance=ExtResource("5_rgf23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4167, 0, 55.041)
+visible = false
+
+[node name="Prefab_OfficeTall" parent="Main" instance=ExtResource("6_khutg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.05536, -0.325241, 56.8454)
+visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Main"]
+environment = SubResource("Environment_2y3ve")
+camera_attributes = SubResource("CameraAttributesPractical_e2sxr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Main"]
+transform = Transform3D(1, 0, 0, 0, 0.558657, 0.829399, 0, -0.829399, 0.558657, 0.206949, 8.25569, 0.508037)
+
+[node name="Node3D2" type="Node3D" parent="Main"]
+
+[node name="City" parent="Main/Node3D2" instance=ExtResource("8_fot2a")]
+
+[node name="Holder_SM_Env" parent="Main/Node3D2" instance=ExtResource("9_c1vbt")]
+
+[node name="Holder_SM_Env_Flowers" parent="Main/Node3D2" instance=ExtResource("10_1jxry")]
+
+[node name="Holder_SM_Props" parent="Main/Node3D2" instance=ExtResource("11_gjp3c")]
+
+[node name="Hud" type="Control" parent="Main"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Input" type="Control" parent="Main/Hud"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("12_ejywo")
+
+[node name="PanelContainer2" type="PanelContainer" parent="Main/Hud"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.262
+anchor_top = 0.024
+anchor_right = 0.756
+anchor_bottom = 0.278
+offset_left = -0.824036
+offset_bottom = -0.144012
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Hud/PanelContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Speed" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 5
+vertical_alignment = 1
+
+[node name="SpeedUnit" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 5
+text = "km/h"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_ii3bo")
+expand_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Distance" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 5
+vertical_alignment = 1
+
+[node name="DistanceUnit" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 5
+text = "km"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("13_sqnch")
+expand_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Time" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 5
+text = "--:--"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("14_aads2")
+expand_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Watts" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+theme_override_font_sizes/font_size = 70
+text = "500w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HeartRate" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_vertical = 5
+text = "--"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("15_b3xij")
+expand_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Cadence" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_vertical = 5
+text = "---"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("16_fbcfr")
+expand_mode = 2
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Calories" type="Label" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_vertical = 5
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Main/Hud/PanelContainer2/VBoxContainer/HBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+texture = ExtResource("17_2t7wr")
+expand_mode = 2
+
+[node name="Settings" type="VBoxContainer" parent="Main/Hud"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.174
+anchor_top = 0.772
+anchor_right = 0.826
+anchor_bottom = 1.0
+offset_left = -0.448013
+offset_top = -0.256012
+offset_right = 0.447937
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+script = ExtResource("19_nup0g")
+
+[node name="Button" type="Button" parent="Main/Hud/Settings"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Bluetooth Settings"
+
+[node name="HSlider" type="HSlider" parent="Main/Hud/Settings"]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 300.0
+step = 10.0
+ticks_on_borders = true
+
+[node name="PanelContainer" type="PanelContainer" parent="Main/Hud" node_paths=PackedStringArray("button1", "button2", "button3", "bluetoothDevices", "status")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wthgb")
+script = ExtResource("2_85j2x")
+button1 = NodePath("MarginContainer/HBoxContainer/VBoxContainer/Button")
+button2 = NodePath("MarginContainer/HBoxContainer/VBoxContainer/Button2")
+button3 = NodePath("MarginContainer/HBoxContainer/VBoxContainer/Button3")
+bluetoothDevices = NodePath("MarginContainer/HBoxContainer/ItemList")
+status = NodePath("MarginContainer/HBoxContainer/VBoxContainer/Label")
+
+[node name="MarginContainer" type="MarginContainer" parent="Main/Hud/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/Hud/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Hud/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Main/Hud/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Disconnect
+"
+
+[node name="Button2" type="Button" parent="Main/Hud/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Scan"
+
+[node name="Button3" type="Button" parent="Main/Hud/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Connect"
+
+[node name="Label" type="Label" parent="Main/Hud/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+
+[node name="Button4" type="Button" parent="Main/Hud/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[node name="Label2" type="Label" parent="Main/Hud/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Status: "
+
+[node name="ItemList" type="ItemList" parent="Main/Hud/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 42
+item_count = 2
+item_0/text = "Test"
+item_1/text = "Test1"
+
+[node name="PanelContainer3" type="PanelContainer" parent="Main/Hud"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.845
+anchor_top = 0.264
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.440063
+offset_top = -0.0720062
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Hud/PanelContainer3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Main/Hud/PanelContainer3/VBoxContainer"]
+layout_mode = 2
+text = "Nearby Riders"
+horizontal_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="Main/Hud/PanelContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="GameClient" type="Node" parent="." node_paths=PackedStringArray("gameNetworkManager")]
+script = ExtResource("14_vn4dk")
+gameNetworkManager = NodePath("GameNetworkManager")
+
+[node name="GameNetworkManager" type="Node" parent="GameClient" node_paths=PackedStringArray("networkManager")]
+script = ExtResource("15_x72nh")
+playerScene = ExtResource("15_dfado")
+networkManager = NodePath("NetworkManager")
+
+[node name="NetworkManager" parent="GameClient/GameNetworkManager" instance=ExtResource("12_ciho8")]
+
+[connection signal="pressed" from="Main/Hud/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Button" to="Main" method="_on_Button_pressed"]
